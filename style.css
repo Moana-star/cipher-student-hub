@@ -191,6 +191,14 @@ input::placeholder, textarea::placeholder { color: #73867d; }
 .fieldset .choice { display: inline-flex; margin: 0 18px 5px 0; font-weight: 400; }
 .consent { font-size: .9rem; color: var(--muted); }
 .form-notice { margin: 0; color: var(--green-dark); font-size: .92rem; }
+.skip-link { position: absolute; top: 8px; left: -9999px; z-index: 20; padding: 10px 14px; border-radius: 4px; background: #fff; color: var(--green-dark); }
+.skip-link:focus { left: 12px; }
+.legal-wrap { max-width: 900px; }
+.legal-content { padding: clamp(22px, 4vw, 38px); border-radius: 4px; }
+.legal-content h2 { margin-top: 30px; }
+.legal-content h2:first-child { margin-top: 0; }
+.legal-content p { max-width: 760px; color: var(--muted); }
+.legal-content p:last-child { margin-bottom: 0; }
 .site-footer {
   display: flex;
   align-items: center;
