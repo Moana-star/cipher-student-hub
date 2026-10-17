@@ -1,49 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Login page preview for the Study Corner project.">
-<title>Log in | Study Corner</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login form preview for the Study Corner student project.">
+  <title>Log in preview | Study Corner</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header class="site-header">
-<nav class="navbar" aria-label="Main navigation">
-<a class="logo" href="index.html">Study Corner</a>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="resources.html">Resources</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a class="active" aria-current="page" href="login.html">Log in</a></li>
-</ul>
-</nav>
-</header>
-<main id="main-content" class="simple-main">
-<h1>Log in</h1>
-<p>Login is not set up yet. You can use the website without an account.</p>
-<p>This form is only a design preview. Do not enter a real password.</p>
-<form id="login-form" class="simple-form">
-<label for="login-email">Email</label>
-<input type="email" id="login-email" name="email" placeholder="example@email.com" required>
-<label for="login-password">Password</label>
-<input type="password" id="login-password" name="password" placeholder="Demo only" required>
-<button class="button button-dark" type="submit">Test form</button>
-<p id="login-notice" role="status" aria-live="polite"></p>
-</form>
-<script>
-document.getElementById("login-form").addEventListener("submit", function (event) {
-  event.preventDefault();
-  document.getElementById("login-password").value = "";
-  document.getElementById("login-notice").textContent = "This is only a preview. You are not logged in.";
-});
-</script>
-</main>
-<footer class="site-footer simple-footer">
-<p>Study Corner | Student project</p>
-<p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></p>
-</footer>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"> Study Corner</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="page-wrap" style="max-width: 640px;">
+    <section class="page-intro">
+      <p class="eyebrow">Preview only</p>
+      <h1>Log in</h1>
+      <p>Accounts are not set up for this website. You can use Study Corner without signing in.</p>
+    </section>
+
+    <section class="glass-panel form-panel">
+      <h2>Sample form</h2>
+      <p class="muted">Use example details only. This form does not log you in or send information anywhere.</p>
+      <form id="login-form" class="contact-form">
+        <div class="form-row">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="email" placeholder="student@example.com" autocomplete="off" required>
+        </div>
+        <div class="form-row">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" placeholder="Demo only" autocomplete="off" required>
+        </div>
+        <button class="button button-primary" type="submit">Test form</button>
+        <p id="login-notice" class="form-notice" role="status" aria-live="polite">Nothing is sent or saved.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Study Corner · Built for an HTML and CSS assignment</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+  <script>
+    // Keep this as a safe front-end demonstration; no credentials are sent.
+    document.getElementById("login-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("login-password").value = "";
+      document.getElementById("login-notice").textContent = "This is only a preview. You are not logged in, and nothing was sent or saved.";
+    });
+  </script>
 </body>
 </html>
