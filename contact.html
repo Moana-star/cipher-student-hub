@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Share a suggestion or a question about the Study Corner learning project.">
-<title>Study Corner | Contact</title>
+<meta name="description" content="A sample contact form for the Study Corner project.">
+<title>Contact | Study Corner</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
@@ -12,7 +12,7 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
 <nav class="navbar" aria-label="Main navigation">
-<a class="logo" href="index.html">study<span>corner.</span></a>
+<a class="logo" href="index.html">Study Corner</a>
 <ul class="nav-links">
 <li><a href="index.html">Home</a></li>
 <li><a href="resources.html">Resources</a></li>
@@ -21,69 +21,29 @@
 </ul>
 </nav>
 </header>
-<main id="main-content">
-<section class="page-hero contact-hero">
-<p class="eyebrow">Contact form preview</p>
-<h1>Try the <span>contact form.</span></h1>
-<p>This is a practice form only. It is not connected to an inbox, and submitting it will not send a message.</p>
-</section>
-<section class="section-wrap contact-layout">
-<div class="contact-copy">
-<p class="eyebrow">Project note</p>
-<h2>No messages are sent.</h2>
-<p>Use the form to preview the labels, fields, and required-field checks. Please do not enter real contact details.</p>
-</div>
-<div class="form-card">
-<h2>Contact form</h2>
-<p class="form-intro">Use sample details only. Required fields are checked by your browser.</p>
-<form id="contact-form" action="#" method="post">
-<div class="form-row">
-<div class="form-group">
-<label for="full-name">Your name</label>
-<input type="text" id="full-name" name="full-name" placeholder="Sample name" autocomplete="off" required>
-</div>
-<div class="form-group">
-<label for="email">Email address</label>
-<input type="email" id="email" name="email" placeholder="sample@example.com" autocomplete="off" required>
-</div>
-</div>
-<div class="form-group">
-<label for="reason">What is your message about?</label>
-<select id="reason" name="reason" required>
-<option value="">Select a topic</option>
-<option value="study-tip">A study habit</option>
-<option value="resource">A learning resource</option>
-<option value="suggestion">An idea for the website</option>
-<option value="other">Something else</option>
-</select>
-</div>
-<fieldset class="form-group radio-group">
-<legend>How are your studies going?</legend>
-<label class="radio-label"><input type="radio" name="progress" value="great"> I feel on track</label>
-<label class="radio-label"><input type="radio" name="progress" value="steady"> Taking it one topic at a time</label>
-<label class="radio-label"><input type="radio" name="progress" value="help"> I could use some guidance</label>
-</fieldset>
-<div class="form-group">
-<label for="message">Your message</label>
-<textarea id="message" name="message" rows="5" placeholder="Write a sample message" required></textarea>
-</div>
-<label class="checkbox-label"><input type="checkbox" name="reply" value="yes"> I would like a reply (demo only).</label>
-<button class="button button-dark form-submit" type="submit">Check form</button>
-<p id="contact-notice" class="form-note" role="status" aria-live="polite">Demo only. Do not use real personal information.</p>
+<main id="main-content" class="simple-main">
+<h1>Contact</h1>
+<p>This is a sample form for the website project. It does not send or save messages. Please use example details only.</p>
+<form id="contact-form" class="simple-form">
+<label for="full-name">Name</label>
+<input type="text" id="full-name" name="full-name" placeholder="Example name" required>
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="example@email.com" required>
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="5" placeholder="Sample message" required></textarea>
+<button class="button button-dark" type="submit">Check form</button>
+<p id="contact-notice" role="status" aria-live="polite">Demo only. Do not enter real personal details.</p>
 </form>
 <script>
 document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    document.getElementById("contact-notice").textContent = "Form check complete. No message was sent or saved.";
+  event.preventDefault();
+  document.getElementById("contact-notice").textContent = "Form checked. No message was sent or saved.";
 });
 </script>
-</div>
-</section>
 </main>
-<footer class="site-footer">
-<p>Study methods, weekly planning, and web development links.</p>
-<p>Study Corner <span>·</span> HTML &amp; CSS practice project</p>
-<p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Conditions</a></p>
+<footer class="site-footer simple-footer">
+<p>Study Corner | Student project</p>
+<p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></p>
 </footer>
 </body>
 </html>
