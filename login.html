@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A demonstration login page for the Study Corner learning project.">
-<title>Study Corner | Log in</title>
+<meta name="description" content="Login page preview for the Study Corner project.">
+<title>Log in | Study Corner</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
@@ -12,7 +12,7 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
 <nav class="navbar" aria-label="Main navigation">
-<a class="logo" href="index.html">study<span>corner.</span></a>
+<a class="logo" href="index.html">Study Corner</a>
 <ul class="nav-links">
 <li><a href="index.html">Home</a></li>
 <li><a href="resources.html">Resources</a></li>
@@ -21,42 +21,29 @@
 </ul>
 </nav>
 </header>
-<main id="main-content" class="login-layout">
-<section class="login-intro">
-<p class="eyebrow">Study Corner</p>
-<h1>Sign in to <span>your study space.</span></h1>
-<p>Account sign-in is not available yet. You can browse the study resources without an account.</p>
-<a class="login-back-link" href="resources.html">Browse study resources instead</a>
-</section>
-<section class="login-card" aria-labelledby="login-heading">
-<h2 id="login-heading">Login preview</h2>
-<p>This form is for design testing only. It will not sign you in.</p>
-<form id="login-form">
-<div class="form-group">
-<label for="login-email">Email address</label>
-<input type="email" id="login-email" name="email" autocomplete="off" placeholder="student@example.com" required>
-</div>
-<div class="form-group">
+<main id="main-content" class="simple-main">
+<h1>Log in</h1>
+<p>Login is not set up yet. You can use the website without an account.</p>
+<p>This form is only a design preview. Do not enter a real password.</p>
+<form id="login-form" class="simple-form">
+<label for="login-email">Email</label>
+<input type="email" id="login-email" name="email" placeholder="example@email.com" required>
 <label for="login-password">Password</label>
-<input type="password" id="login-password" name="password" autocomplete="off" placeholder="Demo password only" required>
-</div>
+<input type="password" id="login-password" name="password" placeholder="Demo only" required>
 <button class="button button-dark" type="submit">Test form</button>
-<div id="login-notice" class="login-notice" role="status" aria-live="polite">Demo complete. No account was signed in and no details were saved.</div>
+<p id="login-notice" role="status" aria-live="polite"></p>
 </form>
-<p class="login-demo-warning">Do not enter a real password or personal information. No account system is connected.</p>
-</section>
-</main>
-<footer class="site-footer">
-<p>Study methods, weekly planning, and web development links.</p>
-<p>Study Corner <span>·</span> HTML &amp; CSS practice project</p>
-<p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Conditions</a></p>
-</footer>
 <script>
 document.getElementById("login-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    document.getElementById("login-password").value = "";
-    document.getElementById("login-notice").classList.add("is-visible");
+  event.preventDefault();
+  document.getElementById("login-password").value = "";
+  document.getElementById("login-notice").textContent = "This is only a preview. You are not logged in.";
 });
 </script>
+</main>
+<footer class="site-footer simple-footer">
+<p>Study Corner | Student project</p>
+<p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></p>
+</footer>
 </body>
 </html>
