@@ -1,51 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Study tips and learning links for students.">
-<title>Study Corner</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Study Corner is a student-made website with study tips and learning resources.">
+  <title>Study Corner | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header class="site-header">
-<nav class="navbar" aria-label="Main navigation">
-<a class="logo" href="index.html">Study Corner</a>
-<ul class="nav-links">
-<li><a class="active" aria-current="page" href="index.html">Home</a></li>
-<li><a href="resources.html">Resources</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="login.html">Log in</a></li>
-</ul>
-</nav>
-</header>
-<main id="main-content" class="simple-main">
-<h1>Study Corner</h1>
-<p>A few study tips and useful learning links.</p>
-<section>
-<h2>Study tips</h2>
-<ul>
-<li>Choose one topic to work on at a time.</li>
-<li>Close your notes and try to explain what you remember.</li>
-<li>Take a short break when you need one.</li>
-<li>Write down anything you need to review later.</li>
-</ul>
-</section>
-<section>
-<h2>Learning resources</h2>
-<p>Visit the <a href="resources.html">resources page</a> for a simple study plan and links to HTML and CSS lessons.</p>
-</section>
-<section>
-<h2>Contact</h2>
-<p>This is a student website project. The contact page is a form preview and does not send messages.</p>
-<p><a href="contact.html">View the contact form</a></p>
-</section>
-</main>
-<footer class="site-footer simple-footer">
-<p>Study Corner | Student project</p>
-<p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></p>
-</footer>
+  <!-- Main navigation links the three assignment pages together. -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"> Study Corner</a>
+      <ul class="nav-links">
+        <li><a class="active" aria-current="page" href="index.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="page-wrap">
+    <section class="hero glass-panel">
+      <div class="hero-copy">
+        <p class="eyebrow">A student project</p>
+        <h1>Make space to learn.</h1>
+        <p>Study Corner brings together a few practical study habits and beginner-friendly web development resources.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="resources.html">Explore resources</a>
+          <a class="text-link" href="contact.html">Send a sample message</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Study notebook illustration" role="img">
+        <div class="art-sheet"><span></span><span></span><span></span><span></span><div class="art-check">✓</div></div>
+        <div class="art-note">One step at a time</div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <div><p class="eyebrow">Start here</p><h2>Small habits that help</h2></div>
+        <p>Choose one idea and try it in your next study session.</p>
+      </div>
+      <div class="three-columns">
+        <article class="glass-panel info-panel">
+          <span class="number">01</span>
+          <h3>Pick one topic</h3>
+          <p>Give one subject your attention instead of trying to cover everything at once.</p>
+        </article>
+        <article class="glass-panel info-panel">
+          <span class="number">02</span>
+          <h3>Recall from memory</h3>
+          <p>Close your notes and write down what you remember before checking the details.</p>
+        </article>
+        <article class="glass-panel info-panel">
+          <span class="number">03</span>
+          <h3>Review your mistakes</h3>
+          <p>Mark the parts that were difficult and return to them later.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="practice-panel glass-panel" id="quick-practice">
+      <div>
+        <p class="eyebrow">Quick practice</p>
+        <h2>Need a study prompt?</h2>
+        <p id="study-prompt">Click the button for a simple idea to try today.</p>
+      </div>
+      <button class="button button-primary" id="prompt-button" type="button">Give me a tip</button>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <div><p class="eyebrow">Keep exploring</p><h2>Useful next steps</h2></div>
+      </div>
+      <div class="two-columns">
+        <div class="glass-panel info-panel">
+          <h3>Study plan</h3>
+          <p>Use the resources page to view a simple weekly plan and revision checklist.</p>
+          <a class="text-link" href="resources.html">View the study plan →</a>
+        </div>
+        <div class="glass-panel info-panel">
+          <h3>Have a question?</h3>
+          <p>Try the sample contact form. It demonstrates HTML form elements and does not send data.</p>
+          <a class="text-link" href="contact.html">Open contact page →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Study Corner · Built for an HTML and CSS assignment</p>
+    <div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+  </footer>
+  <script>
+    // A small button interaction for practising HTML buttons and IDs.
+    const prompts = [
+      "Explain one concept aloud without looking at your notes.",
+      "Write three questions about today's lesson and answer them.",
+      "Review one mistake and explain how to avoid it next time."
+    ];
+    let promptIndex = 0;
+    document.getElementById("prompt-button").addEventListener("click", function () {
+      document.getElementById("study-prompt").textContent = prompts[promptIndex];
+      promptIndex = (promptIndex + 1) % prompts.length;
+    });
+  </script>
 </body>
 </html>
