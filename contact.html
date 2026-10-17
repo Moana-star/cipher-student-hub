@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Corner | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="logo" href="index.html">study<span>corner.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero contact-hero">
+            <p class="eyebrow">Let's talk</p>
+            <h1>Have a question? <span>Drop a note.</span></h1>
+            <p>Share a suggestion, ask about a resource, or tell us what you are learning this week.</p>
+        </section>
+
+        <section class="section-wrap contact-layout">
+            <div class="contact-copy">
+                <p class="eyebrow">A friendly hello</p>
+                <h2>Every good idea starts with a conversation.</h2>
+                <p>This form is part of my HTML and CSS practice project. It shows how common form fields can be organised and styled.</p>
+                <div class="contact-detail">
+                    <span class="detail-mark">01</span>
+                    <div>
+                        <h3>Be specific</h3>
+                        <p>A clear question makes it easier to understand what help you need.</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <span class="detail-mark">02</span>
+                    <div>
+                        <h3>Keep learning</h3>
+                        <p>There is always another topic to explore, and it is okay to ask questions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <h2>Send a message</h2>
+                <p class="form-intro">Fill in the fields below.</p>
+                <form action="#" method="get">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="full-name">Your name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="e.g. Alex Kim" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="alex@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">What is this about?</label>
+                        <select id="reason" name="reason" required>
+                            <option value="">Choose a topic</option>
+                            <option value="study-tip">A study tip</option>
+                            <option value="resource">A learning resource</option>
+                            <option value="suggestion">A suggestion</option>
+                            <option value="other">Something else</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="form-group radio-group">
+                        <legend>How are you feeling about your studies?</legend>
+                        <label class="radio-label"><input type="radio" name="progress" value="great"> Doing well</label>
+                        <label class="radio-label"><input type="radio" name="progress" value="steady"> Taking it step by step</label>
+                        <label class="radio-label"><input type="radio" name="progress" value="help"> Could use some help</label>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <label class="checkbox-label"><input type="checkbox" name="reply" value="yes"> I would like a reply.</label>
+                    <button class="button button-dark form-submit" type="submit">Send message <span aria-hidden="true">→</span></button>
+                    <p class="form-note">Note: this demonstration form does not send messages to a server.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Made for curious minds.</p>
+        <p>Study Corner <span>·</span> HTML &amp; CSS practice project</p>
+    </footer>
+</body>
+</html>
