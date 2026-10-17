@@ -1,49 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A sample contact form for the Study Corner project.">
-<title>Contact | Study Corner</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A sample HTML form demonstrating common input types.">
+  <title>Contact | Study Corner</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header class="site-header">
-<nav class="navbar" aria-label="Main navigation">
-<a class="logo" href="index.html">Study Corner</a>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="resources.html">Resources</a></li>
-<li><a class="active" aria-current="page" href="contact.html">Contact</a></li>
-<li><a href="login.html">Log in</a></li>
-</ul>
-</nav>
-</header>
-<main id="main-content" class="simple-main">
-<h1>Contact</h1>
-<p>This is a sample form for the website project. It does not send or save messages. Please use example details only.</p>
-<form id="contact-form" class="simple-form">
-<label for="full-name">Name</label>
-<input type="text" id="full-name" name="full-name" placeholder="Example name" required>
-<label for="email">Email</label>
-<input type="email" id="email" name="email" placeholder="example@email.com" required>
-<label for="message">Message</label>
-<textarea id="message" name="message" rows="5" placeholder="Sample message" required></textarea>
-<button class="button button-dark" type="submit">Check form</button>
-<p id="contact-notice" role="status" aria-live="polite">Demo only. Do not enter real personal details.</p>
-</form>
-<script>
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-  event.preventDefault();
-  document.getElementById("contact-notice").textContent = "Form checked. No message was sent or saved.";
-});
-</script>
-</main>
-<footer class="site-footer simple-footer">
-<p>Study Corner | Student project</p>
-<p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></p>
-</footer>
+  <!-- This form is for demonstrating HTML form elements only. -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"> Study Corner</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a class="active" aria-current="page" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="page-wrap contact-layout">
+    <section class="page-intro">
+      <p class="eyebrow">Get in touch</p>
+      <h1>Contact Study Corner</h1>
+      <p>This is a demonstration form for the class assignment. It does not send or save your information, so please use example details only.</p>
+      <div class="glass-panel contact-note" id="form-note">
+        <h2>What this form demonstrates</h2>
+        <ul>
+          <li>Labels connected to input fields</li>
+          <li>Text, email, date, select, radio, checkbox, and textarea elements</li>
+          <li>Required fields and a submit button</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="glass-panel form-panel">
+      <h2>Sample message</h2>
+      <form id="contact-form" class="contact-form">
+        <div class="form-row">
+          <label for="full-name">Name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Example name" autocomplete="off" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="student@example.com" autocomplete="off" required>
+        </div>
+        <div class="form-row">
+          <label for="study-date">Preferred follow-up date</label>
+          <input type="date" id="study-date" name="study-date">
+        </div>
+        <div class="form-row">
+          <label for="topic">What is your question about?</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose a topic</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="study">Study tips</option>
+          </select>
+        </div>
+        <fieldset class="form-row fieldset">
+          <legend>How would you like to practise?</legend>
+          <label class="choice"><input type="radio" name="practice" value="examples" required> Examples</label>
+          <label class="choice"><input type="radio" name="practice" value="exercises"> Exercises</label>
+        </fieldset>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write a sample message" required></textarea>
+        </div>
+        <label class="choice consent"><input type="checkbox" id="sample-confirm" required> I understand this is a demo form.</label>
+        <button class="button button-primary" type="submit">Check sample form</button>
+        <p id="contact-notice" class="form-notice" role="status" aria-live="polite">No information is sent or stored.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Study Corner · Built for an HTML and CSS assignment</p>
+    <div class="footer-links"><a href="index.html">Home</a><a href="resources.html">Resources</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+  </footer>
+  <script>
+    // Prevent submission because this project has no backend.
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("contact-notice").textContent = "Form checked successfully. Nothing was sent or saved.";
+    });
+  </script>
 </body>
 </html>
