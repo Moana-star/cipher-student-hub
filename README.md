@@ -6,9 +6,11 @@ Study Corner is a small, three-page website built to practise HTML and CSS. It b
 
 - **Home** — index.html introduces the site and shares a few ways to approach a study session.
 - **Resources** — resources.html includes study habits, a sample weekly plan, and external HTML/CSS learning guides.
-- **Contact** — contact.html demonstrates a form with text and email fields, a dropdown, radio buttons, a checkbox, and a message area.
+- **Contact** — contact.html demonstrates a form with text and email fields, a dropdown, radio buttons, a checkbox, and a message area. The form does not send or store submissions.
+- **Privacy Policy** — privacy.html explains the demonstration form and hosting context.
+- **Terms and Conditions** — terms.html describes basic terms for this learning project.
 
-The pages share style.css and use favicon.svg for the browser tab icon.
+The pages share style.css and use favicon.svg for the browser tab icon. The home page uses a CSS illustration instead of a stock photograph.
 
 ## Skills practised
 
