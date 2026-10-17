@@ -730,3 +730,41 @@ input[type="checkbox"] {
         font-size: 0.9rem;
     }
 }
+
+/* Keyboard users can jump straight to the page content. */
+.skip-link {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 10;
+    padding: 10px 14px;
+    transform: translateY(-160%);
+    background: var(--ink);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--green-dark);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
