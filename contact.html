@@ -23,36 +23,28 @@
 </header>
 <main id="main-content">
 <section class="page-hero contact-hero">
-<p class="eyebrow">Contact page demo</p>
-<h1>Got an idea or a <span>question?</span></h1>
-<p>This page is a form-design example for the Study Corner project. You can look through the fields and try the browser's built-in validation, but messages are not delivered anywhere.</p>
+<p class="eyebrow">Contact form preview</p>
+<h1>Try the <span>contact form.</span></h1>
+<p>This is a practice form only. It is not connected to an inbox, and submitting it will not send a message.</p>
 </section>
 <section class="section-wrap contact-layout">
 <div class="contact-copy">
-<p class="eyebrow">Before you fill it in</p>
-<h2>Keep your question simple.</h2>
-<p>There is no inbox behind this form. It is here to demonstrate common form fields and accessible labels, not to collect personal details or send messages.</p>
-<div class="contact-detail">
-<span class="detail-mark">01</span>
-<div><h3>Say what you need</h3><p>A short, specific question is easier to understand than a long message covering several topics.</p></div>
-</div>
-<div class="contact-detail">
-<span class="detail-mark">02</span>
-<div><h3>It is fine to be learning</h3><p>You do not have to know all the answers before asking a question. Start with the part that is giving you trouble.</p></div>
-</div>
+<p class="eyebrow">Project note</p>
+<h2>No messages are sent.</h2>
+<p>Use the form to preview the labels, fields, and required-field checks. Please do not enter real contact details.</p>
 </div>
 <div class="form-card">
-<h2>Form preview</h2>
-<p class="form-intro">Fields marked by the browser as required must be filled in before submission.</p>
-<form action="#" method="get">
+<h2>Contact form</h2>
+<p class="form-intro">Use sample details only. Required fields are checked by your browser.</p>
+<form id="contact-form" action="#" method="post">
 <div class="form-row">
 <div class="form-group">
 <label for="full-name">Your name</label>
-<input type="text" id="full-name" name="full-name" placeholder="Enter your name" autocomplete="name" required>
+<input type="text" id="full-name" name="full-name" placeholder="Sample name" autocomplete="off" required>
 </div>
 <div class="form-group">
 <label for="email">Email address</label>
-<input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+<input type="email" id="email" name="email" placeholder="sample@example.com" autocomplete="off" required>
 </div>
 </div>
 <div class="form-group">
@@ -73,17 +65,23 @@
 </fieldset>
 <div class="form-group">
 <label for="message">Your message</label>
-<textarea id="message" name="message" rows="5" placeholder="What would you like to ask or suggest?" required></textarea>
+<textarea id="message" name="message" rows="5" placeholder="Write a sample message" required></textarea>
 </div>
 <label class="checkbox-label"><input type="checkbox" name="reply" value="yes"> I would like a reply (demo only).</label>
-<button class="button button-dark form-submit" type="submit">Submit practice form <span aria-hidden="true">→</span></button>
-<p class="form-note">This is a demonstration form. It does not send or store messages.</p>
+<button class="button button-dark form-submit" type="submit">Check form</button>
+<p id="contact-notice" class="form-note" role="status" aria-live="polite">Demo only. Do not use real personal information.</p>
 </form>
+<script>
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    document.getElementById("contact-notice").textContent = "Form check complete. No message was sent or saved.";
+});
+</script>
 </div>
 </section>
 </main>
 <footer class="site-footer">
-<p>A small study space for real-life student schedules.</p>
+<p>Study methods, weekly planning, and web development links.</p>
 <p>Study Corner <span>·</span> HTML &amp; CSS practice project</p>
 <p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Conditions</a></p>
 </footer>
