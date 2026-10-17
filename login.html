@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A demonstration login page for the Study Corner learning project.">
+<title>Study Corner | Log in</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+<nav class="navbar" aria-label="Main navigation">
+<a class="logo" href="index.html">study<span>corner.</span></a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="active" aria-current="page" href="login.html">Log in</a></li>
+</ul>
+</nav>
+</header>
+<main id="main-content" class="login-layout">
+<section class="login-intro">
+<p class="eyebrow">Welcome back</p>
+<h1>Your next study session starts <span>here.</span></h1>
+<p>This login screen is part of the Study Corner website design. It shows how a sign-in page could look before a real account system is added.</p>
+<a class="login-back-link" href="resources.html">Browse study resources instead</a>
+</section>
+<section class="login-card" aria-labelledby="login-heading">
+<h2 id="login-heading">Log in to Study Corner</h2>
+<p>Enter sample details to preview the form. This page does not have real accounts.</p>
+<form id="login-form">
+<div class="form-group">
+<label for="login-email">Email address</label>
+<input type="email" id="login-email" name="email" autocomplete="off" placeholder="student@example.com" required>
+</div>
+<div class="form-group">
+<label for="login-password">Password</label>
+<input type="password" id="login-password" name="password" autocomplete="off" placeholder="Demo password only" required>
+</div>
+<button class="button button-dark" type="submit">Continue</button>
+<div id="login-notice" class="login-notice" role="status" aria-live="polite">This is a design demo. No account was signed in and no details were saved.</div>
+</form>
+<p class="login-demo-warning">Do not enter a real password. This static page is not connected to authentication and should not be used to protect an account.</p>
+</section>
+</main>
+<footer class="site-footer">
+<p>A small study space for real-life student schedules.</p>
+<p>Study Corner <span>·</span> HTML &amp; CSS practice project</p>
+<p class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Conditions</a></p>
+</footer>
+<script>
+document.getElementById("login-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    document.getElementById("login-password").value = "";
+    document.getElementById("login-notice").classList.add("is-visible");
+});
+</script>
+</body>
+</html>
