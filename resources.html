@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Study plan, revision checklist, and HTML and CSS learning resources.">
-  <title>Resources | Study Corner</title>
+  <title>Learning Resources | Cypher Hub — Student Learning Platform</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
@@ -12,11 +12,10 @@
   <!-- Shared navigation makes it easy to move between the three pages. -->
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
-      <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"> Study Corner</a>
+      <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"> Cypher Hub</a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" aria-current="page" href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li><li><a href="index.html#dashboard">Dashboard</a></li>
+        <li><a class="active" aria-current="page" href="resources.html">Resources</a></li><li><a href="resources.html#practice-centre">Practice</a></li><li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -56,7 +55,14 @@
       </div>
     </section>
 
-    <section class="section-block">
+    <section class="glass-panel planner-panel section-block" id="study-planner"><div class="section-heading"><div><p class="eyebrow">Build a routine</p><h2>Smart study planner</h2></div><p>Add tasks and track them from your dashboard. Progress is saved in this browser only.</p></div>
+<form id="planner-form" class="planner-form"><div class="form-row"><label for="task-title">Study task</label><input id="task-title" type="text" maxlength="120" placeholder="e.g. Practise CSS Grid" required></div><div class="form-row"><label for="task-subject">Subject</label><input id="task-subject" type="text" maxlength="60" placeholder="e.g. Web development"></div><div class="form-row"><label for="task-date">Study date</label><input id="task-date" type="date" required></div><div class="form-row"><label for="task-minutes">Duration</label><select id="task-minutes"><option value="15">15 minutes</option><option value="25" selected>25 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option></select></div><button class="button button-primary" type="submit">Add study task</button><p id="planner-notice" class="form-notice" role="status">Your plan is saved on this device.</p></form>
+<div class="planner-toolbar"><label for="weekly-goal">Weekly goal <select id="weekly-goal"><option value="3">3 sessions</option><option value="5" selected>5 sessions</option><option value="7">7 sessions</option><option value="10">10 sessions</option></select></label><button id="clear-completed" class="button button-small button-quiet" type="button">Clear completed tasks</button></div><ul id="planner-task-list" class="planner-list"><li class="empty-state">Your planned tasks will appear here.</li></ul></section>
+<section class="section-block" id="learning-library"><div class="section-heading"><div><p class="eyebrow">Learn at your pace</p><h2>Learning resource library</h2></div><p>Search and filter beginner-friendly HTML, CSS, JavaScript and study-skills guides.</p></div><div class="resource-controls"><div class="form-row"><label for="resource-search">Search resources</label><input id="resource-search" type="search" placeholder="Try forms, layout or JavaScript"></div><div class="form-row"><label for="resource-category">Filter by topic</label><select id="resource-category"><option value="all">All topics</option><option value="HTML">HTML</option><option value="CSS">CSS</option><option value="JavaScript">JavaScript</option><option value="Study skills">Study skills</option></select></div></div><p id="resource-count" class="muted" aria-live="polite">Loading resources…</p><div id="resource-library" class="three-columns resource-grid"><p class="empty-state">Resources will appear here.</p></div></section>
+<section class="section-block" id="practice-centre"><div class="section-heading"><div><p class="eyebrow">Recall · practise · improve</p><h2>Practice centre</h2></div><p>Try a quiz, get instant feedback and review key terms with flashcards.</p></div><div class="two-columns practice-tools">
+<article class="glass-panel info-panel"><p class="eyebrow">Quick assessment</p><h3>Web development quiz</h3><div id="quiz-box"><p>Quiz questions will appear here.</p></div><p id="quiz-feedback" class="form-notice" role="status" aria-live="polite">Choose the best answer.</p><p id="quiz-score" class="muted">Score: 0/0</p><button id="quiz-next" class="button button-primary" type="button" hidden>Next question</button></article>
+<article class="glass-panel info-panel"><p class="eyebrow">Remember the essentials</p><h3>Digital flashcards</h3><div class="flashcard" aria-live="polite"><p id="flashcard-count" class="eyebrow">Card 1 of 10</p><p id="flashcard-front" class="flashcard-text">What does HTML stand for?</p></div><div class="flashcard-actions"><button id="flashcard-flip" class="button button-primary" type="button">Reveal answer</button><button id="flashcard-next" class="button button-quiet" type="button">Next card</button></div><div class="flashcard-actions"><button id="flashcard-known" class="button button-small button-quiet" type="button">I know this</button><button id="flashcard-reset" class="button button-small button-quiet" type="button">Reset progress</button></div><p id="flashcard-progress" class="form-notice" role="status" aria-live="polite">Mark cards you know to track progress.</p></article></div></section>
+<section class="section-block">
       <div class="section-heading">
         <div><p class="eyebrow">Web development</p><h2>HTML and CSS reference links</h2></div>
         <p>These external guides are useful when you need an example or a reminder.</p>
@@ -101,8 +107,9 @@
   </main>
 
   <footer class="site-footer">
-    <p>Study Corner · Built for an HTML and CSS assignment</p>
+    <p>Cypher Hub — Student Learning Platform · Built for learners</p>
     <div class="footer-links"><a href="index.html">Home</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
   </footer>
+  <script src="app.js" defer></script>
 </body>
 </html>
