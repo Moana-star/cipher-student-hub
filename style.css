@@ -265,3 +265,194 @@ input::placeholder, textarea::placeholder { color: #73867d; }
 .roadmap-note{margin:14px 0 0;padding:14px 16px;border-left:3px solid var(--green);background:rgba(255,255,255,.42);color:var(--muted);font-size:.92rem}
 @media(max-width:900px){.roadmap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.roadmap-grid{grid-template-columns:1fr}.roadmap-card{padding:21px}}
+
+
+/* Study Corner UI refinement: calm, consistent, readable, and mobile-first. */
+:root {
+  --ink: #1d332a;
+  --muted: #5e7066;
+  --green: #2f6b4f;
+  --green-dark: #214d39;
+  --line: #e0e8e0;
+  --glass: #ffffff;
+  --glass-strong: #ffffff;
+  --shadow: 0 8px 28px rgba(29, 51, 42, 0.06);
+}
+html { scroll-behavior: auto; }
+body {
+  background: #f5f7f3;
+  background-image: none;
+  background-attachment: initial;
+  color: var(--ink);
+}
+.site-header {
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #e5ebe5;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.navbar { min-height: 72px; }
+.logo { gap: 11px; font-size: 1.12rem; letter-spacing: -.035em; }
+.logo img { width: 34px; height: 34px; }
+.nav-links { gap: 5px; }
+.nav-links a {
+  padding: 9px 13px;
+  border-radius: 9px;
+  color: #40584a;
+  font-weight: 600;
+}
+.nav-links a:hover {
+  border-color: transparent;
+  background: #f0f5ef;
+  box-shadow: none;
+}
+.nav-links a.active {
+  border-color: transparent;
+  background: #e8f1e8;
+  color: var(--green-dark);
+  box-shadow: none;
+}
+.page-wrap { margin-top: 34px; margin-bottom: 64px; }
+.glass-panel {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.hero {
+  min-height: 320px;
+  gap: clamp(24px, 5vw, 58px);
+  padding: clamp(28px, 5vw, 54px);
+  background: #edf4ec;
+  border-color: #e1eae0;
+  border-radius: 22px;
+}
+.hero h1 { max-width: 640px; font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -.06em; }
+.eyebrow { color: #2f6b4f; letter-spacing: .11em; }
+.hero-copy > p:not(.eyebrow) { color: #53685b; }
+.hero-photo { border-radius: 14px; border: 1px solid #dce7dc; box-shadow: 0 8px 20px rgba(29,51,42,.09); }
+.photo-caption {
+  border-radius: 10px;
+  border-color: #e0e8df;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(29,51,42,.08);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.button { border-radius: 9px; min-height: 46px; padding: 10px 18px; font-weight: 700; }
+.button-primary { border-color: var(--green); background: var(--green); }
+.button-primary:hover { background: var(--green-dark); }
+.button-quiet { border-radius: 9px; background: #f7faf6; }
+.text-link { text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.section-block { margin-top: 50px; }
+.section-heading { margin-bottom: 22px; }
+.section-heading h2 { letter-spacing: -.04em; }
+.section-heading > p { color: var(--muted); }
+.three-columns, .two-columns { gap: 18px; }
+.info-panel { padding: clamp(20px, 2.5vw, 28px); }
+.info-panel h3, .info-panel h2 { letter-spacing: -.025em; }
+.number {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 18px;
+  border-radius: 11px;
+  background: #edf4ec;
+  color: var(--green-dark);
+  letter-spacing: 0;
+}
+.practice-panel {
+  border-radius: 16px;
+  margin-top: 36px;
+  padding: clamp(22px, 3vw, 32px);
+  background: #eaf2e8;
+  border-color: #dce8da;
+  box-shadow: none;
+}
+.dashboard-stats { gap: 14px; }
+.stat-card { min-height: 132px; padding: 22px; border-radius: 14px; }
+.stat-card strong { color: var(--green-dark); font-size: 2.15rem; }
+.dashboard-today { margin-top: 16px; }
+.task-row, .planner-task {
+  border-radius: 10px;
+  border-color: #e5ebe4;
+  background: #fbfcfa;
+}
+.empty-state { border-radius: 10px; background: #fafcf9; }
+.planner-panel { border-radius: 18px; }
+.planner-form { gap: 16px; }
+.resource-controls { gap: 14px; }
+.resource-card { min-height: 220px; border-radius: 14px; }
+.resource-tag, .roadmap-status { border-radius: 7px; }
+.quiz-option {
+  border-radius: 9px;
+  border-color: #dce5dc;
+  background: #fafcf9;
+}
+.quiz-option:hover:not(:disabled) { background: #eef5ed; }
+.flashcard {
+  border-radius: 14px;
+  border-color: #e0e8df;
+  background: #f0f5ed;
+}
+.embed-panel { border-radius: 16px; }
+.video-frame { border-radius: 12px; border-color: #e0e8df; }
+.contact-layout { gap: clamp(20px, 4vw, 36px); }
+.contact-note { border-radius: 14px; background: #f0f5ee; box-shadow: none; }
+.form-panel { border-radius: 18px; }
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
+  min-height: 47px;
+  border: 1px solid #d5e0d5;
+  border-radius: 9px;
+  background: #fff;
+}
+textarea { min-height: 130px; }
+input:not([type="checkbox"]):not([type="radio"]):focus,
+select:focus, textarea:focus { border-color: #659477; }
+.legal-content { border-radius: 16px; }
+.legal-content h2 { color: #2c4f3c; }
+.site-footer {
+  border-top: 1px solid #e2e9e1;
+  background: #fff;
+  color: #5e7066;
+}
+.footer-links a { color: #4b6254; }
+.footer-links a:hover { color: var(--green-dark); }
+.roadmap-card { border-radius: 14px; }
+.roadmap-priority { border-color: #b9d1ba; background: #f8fbf7; }
+.roadmap-note { border-radius: 0 9px 9px 0; background: #f3f7f1; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #6b9c7a;
+  outline-offset: 3px;
+}
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr .55fr; }
+  .hero-art { justify-self: end; }
+  .section-block { margin-top: 42px; }
+}
+@media (max-width: 600px) {
+  .navbar { align-items: flex-start; gap: 12px; padding: 13px 0; }
+  .nav-links { width: 100%; gap: 4px; }
+  .nav-links a { padding: 7px 9px; font-size: .88rem; }
+  .page-wrap { margin-top: 22px; margin-bottom: 42px; }
+  .hero { grid-template-columns: 1fr; gap: 24px; padding: 25px 22px; border-radius: 17px; }
+  .hero h1 { font-size: clamp(2.25rem, 11vw, 3.1rem); }
+  .hero-art { justify-self: start; max-width: 180px; }
+  .hero-photo { height: 130px; }
+  .section-block { margin-top: 36px; }
+  .section-heading { gap: 8px; }
+  .section-heading > p { margin-bottom: 0; }
+  .info-panel { padding: 21px; }
+  .dashboard-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .stat-card { min-height: 116px; padding: 16px; }
+  .stat-card strong { font-size: 1.8rem; }
+  .practice-panel { padding: 22px; }
+  .site-footer { gap: 12px; padding: 22px 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
