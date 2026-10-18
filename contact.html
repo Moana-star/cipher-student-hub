@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A sample HTML form demonstrating common input types.">
-  <title>Contact | Study Corner</title>
+  <title>Contact | Cypher Hub — Student Learning Platform</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
@@ -12,11 +12,9 @@
   <!-- This form is for demonstrating HTML form elements only. -->
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
-      <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"> Study Corner</a>
+      <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"> Cypher Hub</a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a class="active" aria-current="page" href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li><li><a href="index.html#dashboard">Dashboard</a></li><li><a href="resources.html">Resources</a></li><li><a href="resources.html#practice-centre">Practice</a></li><li><a class="active" aria-current="page" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -24,7 +22,7 @@
   <main id="main-content" class="page-wrap contact-layout">
     <section class="page-intro">
       <p class="eyebrow">Get in touch</p>
-      <h1>Contact Study Corner</h1>
+      <h1>Contact Cypher Hub</h1>
       <p>This is a demonstration form for the class assignment. It does not send or save your information, so please use example details only.</p>
       <div class="glass-panel contact-note" id="form-note">
         <h2>What this form demonstrates</h2>
@@ -77,9 +75,10 @@
   </main>
 
   <footer class="site-footer">
-    <p>Study Corner · Built for an HTML and CSS assignment</p>
+    <p>Cypher Hub — Student Learning Platform · Built for learners</p>
     <div class="footer-links"><a href="index.html">Home</a><a href="resources.html">Resources</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
   </footer>
+  <script src="app.js" defer></script>
   <script>
     // Prevent submission because this project has no backend.
     document.getElementById("contact-form").addEventListener("submit", function (event) {
