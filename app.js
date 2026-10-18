@@ -1,4 +1,4 @@
-/* Cypher Hub — Student Learning Platform
+/* Study Corner — Student Learning Platform
    Accessible, dependency-free interactions. Data stays in this browser. */
 (function () {
   "use strict";
