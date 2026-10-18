@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Study Corner is a student-made website with study tips and learning resources.">
-  <title>Study Corner | Home</title>
+  <meta name="description" content="Cypher Hub — Student Learning Platform: resources, study planning, quizzes and revision tools.">
+  <title>Cypher Hub — Student Learning Platform | Home</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
@@ -12,10 +12,12 @@
   <!-- Main navigation links the three assignment pages together. -->
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
-      <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"> Study Corner</a>
+      <a class="logo" href="index.html"><img src="favicon.svg" alt="" width="30" height="30"> Cypher Hub</a>
       <ul class="nav-links">
         <li><a class="active" aria-current="page" href="index.html">Home</a></li>
+        <li><a href="index.html#dashboard">Dashboard</a></li>
         <li><a href="resources.html">Resources</a></li>
+        <li><a href="resources.html#practice-centre">Practice</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -26,7 +28,7 @@
       <div class="hero-copy">
         <p class="eyebrow">A student project</p>
         <h1>Make space to learn.</h1>
-        <p>Study Corner brings together a few practical study habits and beginner-friendly web development resources.</p>
+        <p>Cypher Hub brings together a few practical study habits and beginner-friendly web development resources.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="resources.html">Explore resources</a>
           <a class="text-link" href="contact.html">Send a sample message</a>
@@ -62,6 +64,7 @@
       </div>
     </section>
 
+    <section class="section-block" id="dashboard"><div class="section-heading"><div><p class="eyebrow">Your learning at a glance</p><h2>Student dashboard</h2></div><p>Your planner and progress at a glance. Tasks stay in this browser.</p></div><div class="dashboard-stats"><article class="glass-panel stat-card"><span>Planned tasks</span><strong id="stat-total">0</strong></article><article class="glass-panel stat-card"><span>Completed tasks</span><strong id="stat-done">0</strong></article><article class="glass-panel stat-card"><span>Weekly goal</span><strong id="stat-goal">5</strong><span class="stat-caption">study sessions</span></article><article class="glass-panel stat-card"><span>Task progress</span><strong id="progress-value">0%</strong><div class="progress-track" role="progressbar" aria-label="Study task completion" aria-valuemin="0" aria-valuemax="100"><span id="progress-bar"></span></div></article></div><div class="glass-panel info-panel dashboard-today"><h3>Today's study tasks</h3><p class="muted">Tick off tasks as you complete them.</p><ul id="dashboard-tasks" class="task-list"><li class="empty-state">Add a task in your study planner.</li></ul><a class="text-link" href="resources.html#study-planner">Plan a study session →</a></div></section>
     <section class="practice-panel glass-panel" id="quick-practice">
       <div>
         <p class="eyebrow">Quick practice</p>
@@ -91,9 +94,10 @@
   </main>
 
   <footer class="site-footer">
-    <p>Study Corner · Built for an HTML and CSS assignment</p>
+    <p>Cypher Hub — Student Learning Platform · Built for learners</p>
     <div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
   </footer>
+  <script src="app.js" defer></script>
   <script>
     // A small button interaction for practising HTML buttons and IDs.
     const prompts = [
