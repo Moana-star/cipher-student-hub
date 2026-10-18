@@ -1,40 +1,45 @@
-# Study Corner
+# Study Corner — Student Learning Platform
 
-Study Corner is a small, three-page website built to practise HTML and CSS. It brings together a few study ideas, a sample weekly plan, and links to beginner-friendly web development lessons.
+**Tagline:** Make space to learn.
+
+Study Corner is a student learning project with browser-based study planning, beginner-friendly web development resources, a short quiz, and revision flashcards. It is a static website; it does not currently provide user accounts, cloud synchronization, or an AI study assistant.
 
 ## Pages
 
-- **Home** - index.html introduces the site and shares a few ways to approach a study session.
-- **Resources** - resources.html includes study habits, a sample weekly plan, and external HTML/CSS learning guides.
-- **Contact** - contact.html demonstrates a form with text and email fields, a dropdown, radio buttons, a checkbox, and a message area. The form does not send or store submissions.
-- **Log in** - login.html is a visual login-page demo. It does not authenticate users or save login details.
-- **Privacy Policy** - privacy.html explains the demonstration form and hosting context.
-- **Terms and Conditions** - terms.html describes basic terms for this learning project.
+- **Home** — `index.html`: study tips, a dashboard based on tasks saved in the current browser, a rotating study prompt, and a clearly labelled development roadmap.
+- **Resources and Practice** — `resources.html`: a study planner, searchable learning links, a quiz with feedback, flashcards, and an embedded HTML lesson preview.
+- **Contact** — `contact.html`: a form demonstrating common HTML form controls. It validates the form in the browser but does not send or save messages.
+- **Privacy Policy** — `privacy.html`: explains the site's current data handling and limitations.
+- **Terms and Conditions** — `terms.html`: describes the basic terms for this demonstration project.
 
-The pages share style.css and use favicon.svg for the browser tab icon. The design uses a soft, green-blue glassmorphism style. The home page uses a CSS illustration instead of a stock photograph. The login page is not connected to an authentication service.
+The pages share `style.css` and use `favicon.svg) for the browser-tab icon. The visual style uses a restrained green and blue palette, translucent panels, and responsive layouts.
 
-## Skills practised
+## What works now
 
-- Writing a clear HTML page structure and using headings and paragraphs
-- Linking pages together with navigation
-- Adding images with useful alternative text
-- Building a table and using lists
-- Connecting form labels to inputs
-- Styling with CSS selectors, spacing, borders, colours, and typography
-- Using grid and flexbox to organise content
-- Making layouts adjust for smaller screens
-- Adding basic accessibility details such as a skip link and clear navigation labels
+- Study tasks can be added, marked complete, and removed.
+- Tasks and flashcard progress are stored in the visitor's browser using `localStorage`; they are not synced between devices.
+- The dashboard calculates task counts and completion from the saved tasks.
+- The resource library can be searched and filtered.
+- The quiz checks answers and gives immediate feedback.
+- Flashcards can be flipped, navigated, and marked as known.
+- The contact form demonstrates client-side validation and displays a notice explaining that no message is sent.
 
-## View the site
+## Not implemented yet
 
-Open index.html in a browser, then use the navigation at the top to visit the other pages.
+User registration and login, secure accounts, cross-device cloud synchronization, an AI study assistant, and advanced learning analytics are planned ideas only. They are not active services on this website. The contact form is not connected to an email service or backend.
 
-The contact form is a front-end demonstration only. It is not connected to a server, so submitting it does not deliver a message.
+## Privacy and data
 
-## Learning links
+Study tasks and flashcard progress are saved in the browser on the device where the site is used. Clearing browser storage can remove that data. Do not enter sensitive personal information into this project. External learning links are operated by their respective providers and follow their own privacy policies.
 
+## Run locally
+
+Open `index.html` in a browser. Navigate between Home, Resources, Practice, and Contact using the site navigation. The site uses plain HTML, CSS, and JavaScript and has no build step.
+
+## Learning resources
+
+- [MDN Learn web development](https://developer.mozilla.org/en-US/docs/Learn)
 - [W3Schools HTML tutorial](https://www.w3schools.com/html/)
 - [W3Schools CSS tutorial](https://www.w3schools.com/css/)
-- [MDN Learn web development](https://developer.mozilla.org/en-US/docs/Learn)
 
-This is a practice project. The study suggestions and weekly plan are examples; change them to fit your own classes and routine as you continue learning.
+This is an educational project. Study tips and example tasks are suggestions, not a guarantee of academic results.
