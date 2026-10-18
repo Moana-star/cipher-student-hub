@@ -562,3 +562,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .home-feature-card { transition: none; }
   .home-feature-card:hover { transform: none; }
 }
+
+
+/* Keep the hero photo deliberately compact, as requested. */
+.home-page .hero-art { max-width: 180px; }
+.home-page .hero-photo { height: 130px; }
+@media (max-width: 800px) {
+  .home-page .hero-art { max-width: 170px; }
+  .home-page .hero-photo { height: 120px; }
+}
+@media (max-width: 600px) {
+  .home-page .hero-art { max-width: 140px; }
+  .home-page .hero-photo { height: 100px; }
+}
