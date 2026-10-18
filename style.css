@@ -252,3 +252,16 @@ input::placeholder, textarea::placeholder { color: #73867d; }
 .flashcard{display:grid;align-content:center;min-height:170px;margin:16px 0;padding:22px;border:1px solid rgba(255,255,255,.95);background:linear-gradient(135deg,rgba(255,255,255,.8),rgba(218,239,226,.7));text-align:center}.flashcard .eyebrow{margin-bottom:14px}.flashcard-text{margin:0;font-size:1.25rem;font-weight:750}.flashcard-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:10px}
 @media(max-width:900px){.dashboard-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.planner-form{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.dashboard-stats,.planner-form,.resource-controls{grid-template-columns:1fr}.planner-form .button,.planner-form .form-notice{grid-column:auto}.planner-task{align-items:flex-start}.planner-toolbar{align-items:flex-start;flex-direction:column}}
+
+
+/* Cypher Hub growth roadmap — additive styles; existing layouts remain intact. */
+.roadmap-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.roadmap-card{padding:24px;min-width:0}
+.roadmap-card h3{margin:14px 0 8px}
+.roadmap-card p{margin:0;color:var(--muted)}
+.roadmap-status{display:inline-flex;align-items:center;padding:5px 10px;border-radius:99px;background:rgba(35,107,84,.13);color:var(--green-dark);font-size:.78rem;font-weight:750}
+.roadmap-planned{background:rgba(82,106,99,.12);color:#465c54}
+.roadmap-priority{border-color:rgba(35,107,84,.42);background:rgba(255,255,255,.78)}
+.roadmap-note{margin:14px 0 0;padding:14px 16px;border-left:3px solid var(--green);background:rgba(255,255,255,.42);color:var(--muted);font-size:.92rem}
+@media(max-width:900px){.roadmap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.roadmap-grid{grid-template-columns:1fr}.roadmap-card{padding:21px}}
